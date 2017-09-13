@@ -62,7 +62,7 @@ router.post('/', function (req, res, next) {
         }
         console.log(req.body.name);
         
-        db.collection("homework8").find(query).toArray( (err, result) => {
+        db.collection("homework8").find(query).limit(3).toArray( (err, result) => {
             console.log('searching')
             console.log(result);
             res.render('search', { title: 'Search', errors: undefined, locations:result });
