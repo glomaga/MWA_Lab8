@@ -40,8 +40,8 @@ router.post('/', function (req, res, next) {
                 location:
                   { $near :
                      {
-                       $geometry: { type: "Point",  coordinates: [ parseFloat(req.body.longitude), parseFloat(req.body.latitude) ] },
-                       $maxDistance: 5000
+                       $geometry: { type: "Point",  coordinates: [ parseFloat(req.body.longitude), parseFloat(req.body.latitude) ] }
+                       //,$maxDistance: 5000
                      }
                   }
             };
@@ -54,8 +54,8 @@ router.post('/', function (req, res, next) {
                 location:
                   { $near :
                      {
-                       $geometry: { type: "Point",  coordinates: [ parseFloat(req.body.longitude), parseFloat(req.body.latitude) ] },
-                       $maxDistance: 5000
+                       $geometry: { type: "Point",  coordinates: [ parseFloat(req.body.longitude), parseFloat(req.body.latitude) ] }
+                       //,$maxDistance: 5000
                      }
                   }
             };
